@@ -107,8 +107,9 @@ namespace QLIB.Net
                             //开始阻塞
                             WebClient wc = new WebClient();
                             wc.Encoding = Encoding;
-                            string html = wc.DownloadString(job.Url);
+                            job.Data = wc.DownloadData(job.Url);                            
                             wc.Dispose();
+                            string html = Encoding.GetString(job.Data);
                             job.Result = html;
                             Log("下载完成：" + hs.Key, job.Url);
 
@@ -167,6 +168,7 @@ namespace QLIB.Net
         public string Key { get; set; }
         public string Url { get; set; }
         public string Result { get; internal set; }
+        public byte[] Data { get; internal set; }
         public int FailCount { get; internal set; }
     }
 }
