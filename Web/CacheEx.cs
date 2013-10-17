@@ -8,6 +8,10 @@ using System.Web.UI;
 
 namespace QLIB.Web
 {
+    /// <summary>
+    /// ASP.NET 缓存管理器
+    /// step 2
+    /// </summary>
     public static class CacheEx
     {
         /// <summary>
