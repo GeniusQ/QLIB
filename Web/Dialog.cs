@@ -7,6 +7,7 @@ namespace QLIB.Web
 {
 	/// <summary>
 	/// 网页上对话框相关的功能
+    /// test
 	/// </summary>
 	public static class Dialog
 	{
