@@ -5,7 +5,7 @@ using System.Text;
 
 namespace QLIB.Web.Permission
 {
-    public static class WebPageEx
+    public static class WebPageExtend
     {
 
     }

@@ -118,7 +118,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\BastTypeEx.cs" />
+    <Compile Include="Base\BaseTypeEx.cs" />
     <Compile Include="Base\EnumItem.cs" />
     <Compile Include="Log\DebugLogger.cs" />
     <Compile Include="Log\ILogger.cs" />
@@ -135,7 +135,7 @@
     <Compile Include="Base\EnumItemBase.cs" />
     <Compile Include="Text\StringExtend.cs" />
     <Compile Include="Web\Permission\Checker.cs" />
-    <Compile Include="Web\Permission\WebPageEx.cs" />
+    <Compile Include="Web\Permission\WebPageExtend.cs" />
     <Compile Include="Web\WebBrowserEx.cs">
       <SubType>Component</SubType>
     </Compile>

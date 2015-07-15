@@ -7,6 +7,11 @@ namespace QLIB.Base
 {
     public static class EnumExtend
     {
+        public static string GetName(this Enum obj)
+        {
+            return Enum.GetName(obj.GetType(), obj);
+        }
+
         public static List<EnumItem> ToList<T>()
         {
 

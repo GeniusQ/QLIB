@@ -8,7 +8,7 @@ namespace QLIB.Base
     /// <summary>
     ///BastTypeEx 的摘要说明
     /// </summary>
-    public static class BastTypeEx
+    public static class BaseTypeEx
     {
         public static int ToInt(this bool a)
         {
