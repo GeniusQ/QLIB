@@ -134,6 +134,8 @@
     <Compile Include="Base\EnumExtend.cs" />
     <Compile Include="Base\EnumItemBase.cs" />
     <Compile Include="Text\StringExtend.cs" />
+    <Compile Include="Web\Permission\Checker.cs" />
+    <Compile Include="Web\Permission\WebPageEx.cs" />
     <Compile Include="Web\WebBrowserEx.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -194,6 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="UsedDlls\shdocvw.dll" />
+    <Content Include="Web\Permission\Web.Config.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
