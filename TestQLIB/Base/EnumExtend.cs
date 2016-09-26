@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QLIB.Base;
+using System.Diagnostics;
 
 namespace TestQLIB.Base
 {
@@ -12,6 +13,7 @@ namespace TestQLIB.Base
         {
             TestEnum target = TestEnum.Name1;
             string r = target.GetName();
+            Debug.WriteLine(r);
             Assert.AreEqual("Name1", r, "枚举名称不对");
         }
     }
