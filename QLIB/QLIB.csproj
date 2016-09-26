@@ -136,6 +136,8 @@
     <Compile Include="Text\StringExtend.cs" />
     <Compile Include="Web\Permission\Checker.cs" />
     <Compile Include="Web\Permission\WebPageExtend.cs" />
+    <Compile Include="Web\RestApi\ApiHandlerBase.cs" />
+    <Compile Include="Web\RestApi\ApiResult.cs" />
     <Compile Include="Web\WebBrowserEx.cs">
       <SubType>Component</SubType>
     </Compile>
