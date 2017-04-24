@@ -124,6 +124,7 @@
     <Compile Include="Log\ILogger.cs" />
     <Compile Include="Log\LoggerFactory.cs" />
     <Compile Include="Net\BatchDownloader.cs" />
+    <Compile Include="Net\MQ\IClient.cs" />
     <Compile Include="Net\WebClientEx.cs">
       <SubType>Component</SubType>
     </Compile>
