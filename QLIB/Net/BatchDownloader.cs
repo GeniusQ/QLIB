@@ -8,6 +8,9 @@ using System.Text;
 
 namespace QLIB.Net
 {
+    /// <summary>
+    /// 批量下载器
+    /// </summary>
     public class BatchDownloader
     {
         public BatchDownloader()
@@ -19,8 +22,17 @@ namespace QLIB.Net
             MaxRetryCount = 3;
         }
 
+        /// <summary>
+        /// 单个下载任务完成事件
+        /// </summary>
         public event Action<object,BatchDownloadJob> SingleJobFinished;
+        /// <summary>
+        /// 全部任务完成事件
+        /// </summary>
         public event EventHandler AllJobFinished;
+        /// <summary>
+        /// 任务下载失败事件
+        /// </summary>
         public event Action<object, BatchDownloadJob> JobError;
 
         #region 下载任务管理
