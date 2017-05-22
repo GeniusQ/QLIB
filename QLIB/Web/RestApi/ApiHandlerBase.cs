@@ -16,7 +16,9 @@ namespace QLIB.Web.RestApi
                 return false;
             }
         }
-
+        /// <summary>
+        /// API执行结果
+        /// </summary>
         protected ApiResult ret { get; private set; }
 
         public void ProcessRequest(HttpContext context)
