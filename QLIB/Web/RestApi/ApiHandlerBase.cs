@@ -27,11 +27,12 @@ namespace QLIB.Web.RestApi
             ret = new ApiResult();
 
             var cmd = context.Request.QueryString["cmd"] ?? "";
-            ret.Page = Convert.ToInt32(context.Request.Form["page"] ?? "1");
-            ret.Size = Convert.ToInt32(context.Request.Form["size"] ?? "20");
+            ret.Page = Convert.ToInt32(context.Request["page"] ?? "1");
+            ret.Size = Convert.ToInt32(context.Request["size"] ?? "20");
             try
             {
-                Do(context.Request, cmd);
+                if(PreDo(context)==true)
+                    Do(context.Request, cmd);
             }
             catch (Exception ex)
             {
@@ -46,6 +47,16 @@ namespace QLIB.Web.RestApi
             var json = GetJson(ret);
             context.Response.Write(json);
             context.Response.Flush();
+        }
+
+        /// <summary>
+        /// Do之前的检查
+        /// </summary>
+        /// <param name="ctx"></param>
+        /// <returns></returns>
+        public virtual bool PreDo(HttpContext ctx)
+        {
+            return true;
         }
 
         public abstract void Do(HttpRequest req, string cmd);
