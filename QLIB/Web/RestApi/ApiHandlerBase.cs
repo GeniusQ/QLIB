@@ -45,6 +45,9 @@ namespace QLIB.Web.RestApi
             context.Response.ContentEncoding = System.Text.Encoding.UTF8;
             context.Response.ContentType = "text/plain";
             var json = GetJson(ret);
+            var jsonp = context.Request["callback"] ?? "";
+            if (string.IsNullOrWhiteSpace(jsonp) == false)
+                json = jsonp + "(" + json + ");";
             context.Response.Write(json);
             context.Response.Flush();
         }
